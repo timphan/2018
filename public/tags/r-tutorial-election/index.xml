@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Tutorial Election on Tim Thoughts</title>
+    <link>/tags/r-tutorial-election/</link>
+    <description>Recent content in R Tutorial Election on Tim Thoughts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r-tutorial-election/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Election Analysis, Pt 2: Web-scraping with rvest and gdata using Alabama</title>
+      <link>/blog/2016-04-16-election_2/</link>
+      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2016-04-16-election_2/</guid>
+      <description>So I&amp;rsquo;ve been relying on the excellent Green Papers site for the majority of the data that I want. Here is what&amp;rsquo;s on their website, and it&amp;rsquo;s generally the most reliable source (you&amp;rsquo;ll notice that a lot of major media sites like FiveThirtyEight will reference their work).
+If I wanted to scrape this exact data frame as it is, I can use &amp;ldquo;rvest&amp;rdquo;&amp;rdquo; to do so.
+{% highlight r %} library(rvest) al&amp;lt;- &amp;ldquo;http://www.</description>
+    </item>
+    
+    <item>
+      <title>Election Analysis in R</title>
+      <link>/blog/2016-04-07-election/</link>
+      <pubDate>Thu, 07 Apr 2016 13:09:13 -0600</pubDate>
+      
+      <guid>/blog/2016-04-07-election/</guid>
+      <description>I&amp;rsquo;m going to write my first tutorial in R. While I would never call myself an expert in R (especially when I follow the footsteps of so many great R programmers), I hope some beginners to data analysis may find use in my thoughts. A more experienced programmer would (and should!) pick out inefficiencies and errors in my code.
+I&amp;rsquo;m thoroughly obssessed with the US election this year, if you&amp;rsquo;ve noticed my Tweets over the last few months.</description>
+    </item>
+    
+  </channel>
+</rss>

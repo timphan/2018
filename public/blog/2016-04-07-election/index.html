@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+
+<base href="/">
+<title>
+
+
+     Election Analysis in R 
+
+</title>
+<link rel="canonical" href="/blog/2016-04-07-election/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+
+
+    <link rel="stylesheet" href="/css/light-style.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/img/fav.ico"
+
+>
+
+
+
+
+
+
+
+</head>
+
+<body>
+  
+
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="/#about">About</a> 
+      </span>
+      <span class="nav-item">
+        <a href="/blog">Back to blog</a>
+      </span> 
+      <span class="nav-item">
+        <a href="/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="/blog/2016-04-07-election/">Election Analysis in R</a></h2>
+            <div class="post-data">
+                Apr 7, 2016 |
+                3 minutes read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20Election%20Analysis%20in%20R%20%2fblog%2f2016-04-07-election%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                
+                 
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2f2016-04-07-election%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                
+                
+                
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fblog%2f2016-04-07-election%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>I&rsquo;m going to write my first tutorial in R. While I would never call
+myself an expert in R (especially when I follow the footsteps of so many
+great R programmers), I hope some beginners to data analysis may find
+use in my thoughts. A more experienced programmer would (and should!)
+pick out inefficiencies and errors in my code.</p>
+
+<p>I&rsquo;m thoroughly obssessed with the US election this year, if you&rsquo;ve
+noticed my Tweets over the last few months. The question we&rsquo;ll be
+looking to answer for this project, what are the geographic areas in
+which certain candidates are strongest? Media organizations like the
+<a href="http://www.nytimes.com/elections/2016/national-results-map">New York
+Times</a>, <a href="http://graphics.latimes.com/2016-election-delegates/">Los
+Angeles Times</a>,
+and
+<a href="http://projects.fivethirtyeight.com/2016-swing-the-election/">FiveThirtyEight</a>
+have worked on fascinating interactives to help visualize the chaos of
+the Republican and Democratic primaries. While we&rsquo;re not looking to
+re-invent the wheel here, it will be a fun challenge to replicate some
+of their ideas within the R ecosystem so that we may go a bit further.</p>
+
+<p>One particular thing I noticed about the NYT map is that it is divided
+into counties, and the LAT map is divided by state. Let&rsquo;s go a bit
+further, and take a more granular view and see if we can build a map
+focusing on Congressional districts. This is bit problematic because
+this data isn&rsquo;t readily available on most major news outlets, as they
+tend to report results coming in by county (for example, <a href="http://www.cbsnews.com/elections/2016/primaries/democrat/iowa/#county-results">CBS&rsquo;s coverage
+of the Iowa
+caucus</a>).</p>
+
+<p>Fortunately there&rsquo;s a wonderful website called the <a href="http://www.thegreenpapers.com/">Green
+Papers</a>, which has become a one-stop
+shop for political nerds wishing to learn the arcane rules of state
+elections. What their website lacks in graphic design, it makes up for
+in astounding substance if you&rsquo;re trying to figure out how delegates are
+allocated. They&rsquo;ve done a lot of the heavy lifting for us, which would
+be agreggrating congressional-level data directly from state election
+offices and party websites. We will be webscraping their data whenever
+possible and available, I trust no other site more on the Internet for
+accurate delegate counts (you&rsquo;ll find that the AP, CNN, CBS, NYT etc etc
+all vary in their exact delegate count, as many states&rsquo;s final count
+will not be solidified until state conventions, delegate selection&hellip;it
+gets a little nauseating thinking about it, ugh.)</p>
+
+<p>So we&rsquo;ll start with the annoying part of any data project. Getting clean
+data. Part one will focus on web-scraping, cleaning, data manipulation.
+These are the mundane tasks you delegate to your interns. Just know that
+it&rsquo;s vital to your ultimate goal of some fancy regression or app.</p>
+
+<p>PART 1 web-scraping</p>
+
+<p>PART 2 data cleaning</p>
+
+<p>PART 3 visualization in DT</p>
+
+<p>PART 4 spatial mapping</p>
+
+<p>PART 5 shiny</p>
+
+<p>PART 6 deploying</p>
+
+<p>I&rsquo;m gonna deploy the final app so that you&rsquo;ll have a sneak peek of what
+the result looks like.</p>
+
+<p><iframe src="https://timphan.shinyapps.io/democrats/" style="border: none; width: 1000px; height: 1000px">
+</iframe>
+Shall we begin?</p>
+
+<pre><code>library(rvest)
+library(dplyr)
+library(plyr)
+library(tidyr)
+library(stringr)
+</code></pre>
+
+    </div>
+
+    <div class="disqus">
+        
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="/blog/2016-04-07-election/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text"><a href="https://github.com/hivickylai/hugo-theme-introduction" target="_blank" rel="noopener">Introduction</a> theme for <a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. Made with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i>. <a href="https://vickylai.io" target="_blank" rel="noopener">Vicky Lai</a> 2018</span>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<script>
+$('a[href^="\/blog\/2016-04-07-election\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
+
+</body>

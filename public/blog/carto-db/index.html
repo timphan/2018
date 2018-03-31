@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="Website Description">
+
+<base href="/">
+<title>
+
+
+     American Census Survey in R with CartoDB 
+
+</title>
+<link rel="canonical" href="/blog/carto-db/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans">
+
+
+
+    <link rel="stylesheet" href="/css/light-style.css">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="/img/fav.ico"
+
+>
+
+
+
+
+
+
+
+</head>
+
+<body>
+  
+
+
+<div class="section" id="top">
+
+    <div class="container hero  fade-in one ">
+    <h1 class="bold-title is-1">Blog</h1>
+    </div>
+
+
+<div class="section  fade-in two ">
+
+    <div class="container">
+    <hr>
+<nav class="nav nav-center">
+    <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div id="nav-menu" class="nav-left nav-menu">
+      <span class="nav-item">
+        <a href="/">Main</a>
+      </span>
+      <span class="nav-item">
+        <a href="/#about">About</a> 
+      </span>
+      <span class="nav-item">
+        <a href="/blog">Back to blog</a>
+      </span> 
+      <span class="nav-item">
+        <a href="/#contact">Contact</a>
+      </span>
+    
+      <span class="nav-item">
+        <a href="/index.xml"><i class="fa fa-rss"></i></a>
+      </span>
+    
+    </div>
+</nav>
+<hr>
+    </div>
+
+    <div class="container  fade-in two ">
+        <h2 class="title is-1 top-pad strong-post-title"><a href="/blog/carto-db/">American Census Survey in R with CartoDB</a></h2>
+            <div class="post-data">
+                Jan 6, 2016 |
+                1 minute read
+            </div>
+
+            
+                <div class="blog-share">
+                Share this:
+                
+                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Read%20American%20Census%20Survey%20in%20R%20with%20CartoDB%20%2fblog%2fcarto-db%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fa fa-twitter"></i>
+                <span class="hidden">Twitter</span>
+                </a>
+                
+                 
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2fcarto-db%2f"
+                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                <i class="fa fa-facebook"></i>
+                <span class="hidden">Facebook</span>
+                </a>
+                
+                
+                
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=%2fblog%2fcarto-db%2f"
+                onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                <i class="fa fa-google-plus"></i>
+                <span class="hidden">Google+</span>
+                </a>
+                
+                </div>
+            
+
+    </div>
+
+    <div class="container markdown  fade-in two  top-pad">
+        <p>honors to Kyle Walker per usual, for his handy hack of the ACS package.</p>
+
+<p>Orange County&rsquo;s GINI index as of the American Census Survey&rsquo;s recent 2010-2014  estimates.</p>
+
+<p>{% highlight r %}
+library(dplyr)
+library(acs14lite)
+library(CartoDB)
+library(rgdal)
+library(acs)
+{% endhighlight %}</p>
+
+<p>Set up permissions (get API keys from ACS, CartoDB)</p>
+
+<p>{% highlight r %}
+set_api_key(&lsquo;zzzzzz&rsquo;)
+cartodb(&lsquo;username&rsquo;,&lsquo;apikey&rsquo;)
+{% endhighlight %}</p>
+
+<p>Code</p>
+
+<p>{% highlight r %}
+acs.lookup(endyear=2014, keyword=&ldquo;Gini&rdquo;) #use ACS package to look up correct table numbers
+oc&lt;- acs14(geography = &lsquo;tract&rsquo;, variable = c(&lsquo;B19083_001E&rsquo;, &lsquo;B19083_001M&rsquo;), state = &lsquo;CA&rsquo;, county=&lsquo;Orange&rsquo;)
+oc_tracts &lt;- tracts(&lsquo;CA&rsquo;, &lsquo;Orange County&rsquo;, cb = TRUE)
+oc2&lt;- oc %&gt;% mutate(geoid = paste0(state, county, tract), gini = round(100 *(B19083_001E),1), moe= round(100 *(B19083_001M),1)) %&gt;% select (geoid, gini, moe)
+oc_tracts2 &lt;- geo_join(oc_tracts, oc2, &ldquo;GEOID&rdquo;, &ldquo;geoid&rdquo;)
+r2cartodb(oc_tracts2, &lsquo;oc&rsquo;)
+{% endhighlight %}</p>
+
+<iframe width="100%" height="520" frameborder="0" src="https://u2phan.cartodb.com/viz/19ed9aba-b53e-11e5-a9da-0e3ff518bd15/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<p>No big surprise, Newport Beach&rsquo;s pretty wealthy. Digging deeper in ACS data with CartoDB sounds promising though, it&rsquo;s a lot easier to visualize disparities.</p>
+
+    </div>
+
+    <div class="disqus">
+        
+    </div>
+
+<div class="container has-text-centered top-pad">
+<hr>
+<a href="/blog/carto-db/#top"><i class="fa fa-arrow-up"></i></a>
+<hr>
+</div>
+
+<div class="section" id="footer">
+    <div class="container has-text-centered">
+        
+        <span class="footer-text"><a href="https://github.com/hivickylai/hugo-theme-introduction" target="_blank" rel="noopener">Introduction</a> theme for <a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. Made with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i>. <a href="https://vickylai.io" target="_blank" rel="noopener">Vicky Lai</a> 2018</span>
+        
+    </div>
+</div>
+
+</div>
+</div>
+
+
+<script>
+$('a[href^="\/blog\/carto-db\/#"]').click(function(e) {
+    e.preventDefault();
+    var target = this.hash;
+    $('html, body').animate({
+    scrollTop: $(target).offset().top
+    }, 500);
+    return false;
+})
+</script>
+
+</body>
