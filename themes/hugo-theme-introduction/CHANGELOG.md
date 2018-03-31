@@ -1,32 +1,3 @@
-## Version 3.3.0 - Mar 25 2018
-
-- Default parameters implemented so theme renders without custom config parameters
-- Local assets placed 
-
-*Thank you very much to @paskal and @Hanzei for your important contributions!*
-
-## Version 3.2.1 - Feb 3 2018
-
-- Allow highlight theme choice using built-in Chroma and `pygmentsStyle` config
-- Improvement for modal rendering
-
-*Thanks to @darkk for the contribution!*
-
-- Included Sass files
-
-# Version 3.2 - Jan 26 2018
-
-- Fixed "theme" namespace bug in exampleSite config file that prevented site building after Hugo v0.32.2 (#22)
-- Updates supporting up to Hugo v0.35dev
-- Added default templates for taxonomy pages
-- Made asset links in head partial relative
-
-*Thanks to @nancym, @penance316, @quendera, and @mrshannon for helping me squish 🐞!*
-
-- Parameter names changed to camelCase
-
-*Thanks to @danieldiaz14 for the contribution!*
-
 ## Version 3.1.2 - Dec 30 2017
 
 - Updated to FontAwesome 4.7.0
@@ -40,7 +11,7 @@
 
 *Thanks to [@pmviva](https://github.com/pmviva) for the contribution!*
 
-# Version 3.1 - Nov 14 2017
+## Version 3.1 - Nov 14 2017
 
 - Added columns option to projects section
 - Fixed bugs with project section modal links
