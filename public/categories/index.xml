@@ -2,20 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Tim Thoughts</title>
-    <link>/categories/</link>
+    <link>https://timthoughts.com/categories/</link>
     <description>Recent content in Categories on Tim Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 30 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://timthoughts.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Blog</title>
+      <link>https://timthoughts.com/categories/blog/</link>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://timthoughts.com/categories/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Personal</title>
-      <link>/categories/personal/</link>
+      <link>https://timthoughts.com/categories/personal/</link>
       <pubDate>Wed, 03 Jan 2018 21:49:57 -0700</pubDate>
       
-      <guid>/categories/personal/</guid>
+      <guid>https://timthoughts.com/categories/personal/</guid>
       <description></description>
     </item>
     

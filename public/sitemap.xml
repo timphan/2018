@@ -3,102 +3,93 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/projects/campaign/</loc>
+    <loc>https://timthoughts.com/projects/campaign/</loc>
     <lastmod>2017-11-13T12:21:21-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/projects/activist/</loc>
+    <loc>https://timthoughts.com/projects/activist/</loc>
     <lastmod>2017-11-13T12:21:16-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/new-year/</loc>
+    <loc>https://timthoughts.com/blog/sanctuary/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://timthoughts.com/post/sanctuary/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://timthoughts.com/blog/new-year/</loc>
     <lastmod>2018-01-03T21:49:57-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/new-site/</loc>
+    <loc>https://timthoughts.com/blog/new-site/</loc>
     <lastmod>2017-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/contact/</loc>
+    <loc>https://timthoughts.com/contact/</loc>
     <lastmod>2017-03-09T13:23:28+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://timthoughts.com/about/</loc>
     <lastmod>2017-03-09T13:19:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/life-update/</loc>
+    <loc>https://timthoughts.com/blog/life-update/</loc>
     <lastmod>2016-08-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/funes/</loc>
-    <lastmod>2016-04-28T00:00:00+00:00</lastmod>
+    <loc>https://timthoughts.com/categories/blog/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blog/2016-04-16-election_2/</loc>
-    <lastmod>2016-04-16T00:00:00+00:00</lastmod>
+    <loc>https://timthoughts.com/blog/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blog/kobe/</loc>
-    <lastmod>2016-04-13T00:00:00+00:00</lastmod>
+    <loc>https://timthoughts.com/categories/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>/blog/2016-04-07-election/</loc>
-    <lastmod>2016-04-07T13:09:13-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/carto-db/</loc>
-    <lastmod>2016-01-06T13:09:13-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/</loc>
+    <loc>https://timthoughts.com/categories/personal/</loc>
     <lastmod>2018-01-03T21:49:57-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://timthoughts.com/post/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/personal/</loc>
-    <lastmod>2018-01-03T21:49:57-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
+    <loc>https://timthoughts.com/projects/</loc>
     <lastmod>2017-11-13T12:21:21-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/r-tutorial-election/</loc>
-    <lastmod>2016-04-16T00:00:00+00:00</lastmod>
+    <loc>https://timthoughts.com/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2016-04-16T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+    <loc>https://timthoughts.com/</loc>
     <lastmod>2017-11-13T12:21:21-05:00</lastmod>
     <priority>0</priority>
   </url>

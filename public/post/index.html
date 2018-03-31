@@ -14,10 +14,10 @@
 <title>
 
 
-     Blogs 
+     Posts 
 
 </title>
-<link rel="canonical" href="https://timthoughts.com/blog/">
+<link rel="canonical" href="https://timthoughts.com/post/">
 
 
 
@@ -59,7 +59,7 @@ crossorigin="anonymous"></script>
 
 
 
-  <link href="https://timthoughts.com/blog/index.xml" rel="alternate" type="application/rss+xml" title="Tim Thoughts" />
+  <link href="https://timthoughts.com/post/index.xml" rel="alternate" type="application/rss+xml" title="Tim Thoughts" />
 
 
 </head>
@@ -69,16 +69,19 @@ crossorigin="anonymous"></script>
 
 
 <div class="section" id="top">
-
+    
     <div class="container hero  fade-in one ">
-    <h1 class="bold-title is-1">Blog</h1>
+        
+        <h1 class="bold-title is-1">Posts</h1>
     </div>
+    
 
     
     <div class="section no-padding  fade-in two ">
 
-    <div class="container">
-    <hr>
+        <div class="container">
+            
+            <hr>
 <nav class="nav nav-center">
     <span id="nav-toggle" class="nav-toggle"  onclick="document.getElementById('nav-menu').classList.toggle('is-active');">
       <span></span>
@@ -108,50 +111,36 @@ crossorigin="anonymous"></script>
     </div>
 </nav>
 <hr>
-    </div>
-       
-    <div class="container">
-
-    
-
-    <h2 class="title is-2 top-pad">All Posts</h2>
-        <ul>
+        </div>
         
+        <article>
             
-                <li class="post-item">
-    <span><a href="https://timthoughts.com/blog/life-update/">New Job!</a></span> - <span>Aug 13, 2016</span>
-</li>
             
-        
-            
-                <li class="post-item">
-    <span><a href="https://timthoughts.com/blog/new-site/">Switched to Hugo!</a></span> - <span>May 31, 2017</span>
-</li>
-            
-        
-            
-                <li class="post-item">
-    <span><a href="https://timthoughts.com/blog/new-year/">Recap from 2017!</a></span> - <span>Jan 3, 2018</span>
-</li>
-            
-        
-            
-                <li class="post-item">
-    <span><a href="https://timthoughts.com/blog/sanctuary/">sanctuary</a></span> - <span>Mar 30, 2018</span>
-</li>
-            
-        
-        </ul>
+        </article>
 
-    </div>
 
-<div class="container has-text-centered top-pad">
-<hr>
-<a href="https://timthoughts.com/blog/#top"><i class="fa fa-arrow-up"></i></a>
-<hr>
-</div>
+        <div class="container">
+            
+            <ul>
+                
+                 
+                <li>
+                    <a href="https://timthoughts.com/post/sanctuary/">Mar 30, 2018 | sanctuary</a>
+                </li>
+                 
+            </ul>
+        </div>
+        
 
-<div class="section" id="footer">
+        <div class="container has-text-centered top-pad">
+            <hr>
+            <a href="https://timthoughts.com/post/#top">
+                <i class="fa fa-arrow-up"></i>
+            </a>
+            <hr>
+        </div>
+
+        <div class="section" id="footer">
     <div class="container has-text-centered">
         
         <span class="footer-text"><a href="https://github.com/hivickylai/hugo-theme-introduction" target="_blank" rel="noopener">Introduction</a> theme for <a href="http://gohugo.io/" target="_blank" rel="noopener">Hugo</a>. Made with <i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i>. <a href="https://vickylai.io" target="_blank" rel="noopener">Vicky Lai</a> 2018</span>
@@ -159,19 +148,21 @@ crossorigin="anonymous"></script>
     </div>
 </div>
 
+    </div>
+    
 </div>
-</div>
+
 
 
 <script>
-$('a[href^="https:\/\/timthoughts.com\/blog\/#"]').click(function(e) {
-    e.preventDefault();
-    var target = this.hash;
-    $('html, body').animate({
-    scrollTop: $(target).offset().top
-    }, 500);
-    return false;
-})
+    $('a[href^="https:\/\/timthoughts.com\/post\/#"]').click(function (e) {
+        e.preventDefault();
+        var target = this.hash;
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 500);
+        return false;
+    })
 </script>
 
 </body>

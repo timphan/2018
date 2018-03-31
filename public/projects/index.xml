@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Tim Thoughts</title>
-    <link>/projects/</link>
+    <link>https://timthoughts.com/projects/</link>
     <description>Recent content in Projects on Tim Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 13 Nov 2017 12:21:21 -0500</lastBuildDate>
     
-	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://timthoughts.com/projects/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Campaign Stuff</title>
-      <link>/projects/campaign/</link>
+      <link>https://timthoughts.com/projects/campaign/</link>
       <pubDate>Mon, 13 Nov 2017 12:21:21 -0500</pubDate>
       
-      <guid>/projects/campaign/</guid>
+      <guid>https://timthoughts.com/projects/campaign/</guid>
       <description>I love volunteering and assisting in many political campaigns as possible! Nothing like a good old GOTV&amp;hellip;
 Since my involvement with the Hillary Clinton campaign ended in November of 2016, I&amp;rsquo;ve come back home to Southern California with a dedicated interest in supporting quality candidates in my local community. I proudly volunteered for Sara Hernandez in the CD 34 race, Frank Yokoyama for his successful bid to the Cerritos City Council, and Mike Fong&amp;rsquo;s bid for the AD51 race.</description>
     </item>
     
     <item>
       <title>Activist Stuff</title>
-      <link>/projects/activist/</link>
+      <link>https://timthoughts.com/projects/activist/</link>
       <pubDate>Mon, 13 Nov 2017 12:21:16 -0500</pubDate>
       
-      <guid>/projects/activist/</guid>
-      <description>Currently I am organizing with the Korean Resource Center. It has been an honor to stand among such dedicated and talented activists in the AAPI community to fight for immigration justice against an administration so openly hostile to our communities.
+      <guid>https://timthoughts.com/projects/activist/</guid>
+      <description>I recently finished an organizing internship with the Korean Resource Center. It has been an honor to stand among such dedicated and talented activists in the AAPI community to fight for immigration justice against an administration so openly hostile to our communities.
 The 2018 elections will be an important checkpoint on the progressive movement&amp;rsquo;s resistance against the Trump administration, but the larger work of organizing towards justice and equality transcend any one election.</description>
     </item>
     

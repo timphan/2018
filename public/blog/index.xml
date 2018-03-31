@@ -2,31 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Tim Thoughts</title>
-    <link>/blog/</link>
+    <link>https://timthoughts.com/blog/</link>
     <description>Recent content in Blogs on Tim Thoughts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jan 2018 21:49:57 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 30 Mar 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://timthoughts.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>sanctuary</title>
+      <link>https://timthoughts.com/blog/sanctuary/</link>
+      <pubDate>Fri, 30 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://timthoughts.com/blog/sanctuary/</guid>
+      <description>Huntington Beach, let&amp;rsquo;s do it.</description>
+    </item>
+    
+    <item>
       <title>Recap from 2017!</title>
-      <link>/blog/new-year/</link>
+      <link>https://timthoughts.com/blog/new-year/</link>
       <pubDate>Wed, 03 Jan 2018 21:49:57 -0700</pubDate>
       
-      <guid>/blog/new-year/</guid>
+      <guid>https://timthoughts.com/blog/new-year/</guid>
       <description>Happy New Year!
 Here&amp;rsquo;s what I did in 2017.</description>
     </item>
     
     <item>
       <title>Switched to Hugo!</title>
-      <link>/blog/new-site/</link>
+      <link>https://timthoughts.com/blog/new-site/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/blog/new-site/</guid>
+      <guid>https://timthoughts.com/blog/new-site/</guid>
       <description>Switched to Hugo because people at #runconf17 were talking about it. LOL
 I liked my previous platform on Jekyll + Github Pages, but I wasn&amp;rsquo;t really posting much on it anyways. I really like using the RStudio tools, consider this a shoutout to my R community.
 Thanks to Yihue Xie and Amber Thomas for the blogdown package, (and also for Amber&amp;rsquo;s helpful tutorial), and Vicky Laiio for the Hugo theme.</description>
@@ -34,69 +43,12 @@ Thanks to Yihue Xie and Amber Thomas for the blogdown package, (and also for Amb
     
     <item>
       <title>New Job!</title>
-      <link>/blog/life-update/</link>
+      <link>https://timthoughts.com/blog/life-update/</link>
       <pubDate>Sat, 13 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/blog/life-update/</guid>
+      <guid>https://timthoughts.com/blog/life-update/</guid>
       <description>So much for writing about the election this year. I just moved to Tampa to join Hillary Clinton and the Florida Democrats, I&amp;rsquo;ll be working on the data and analytics team for the duration of the election. Volunteering as a fellow during the California primary for HRC will always be a highlight of my life, and I&amp;rsquo;m really thankful for all the great people I met.
 But now the hardest part comes next.</description>
-    </item>
-    
-    <item>
-      <title>Data Perfectionism is the Enemy</title>
-      <link>/blog/funes/</link>
-      <pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/funes/</guid>
-      <description>Back in graduate school, my development economist professor assigned us a story by Jorge Luis Borges. In &amp;ldquo;Funes the Memorious&amp;rdquo;, the protagonist meets a teenage prodigy who has developed perfect memory due to a horseriding accident. For example the young boy could recall an entire&amp;rsquo;s worth of memories, and spend an entire day reliving his thoughts from the previous day.
-As we discussed the story, a student remarked wow, what a cool ability!</description>
-    </item>
-    
-    <item>
-      <title>Election Analysis, Pt 2: Web-scraping with rvest and gdata using Alabama</title>
-      <link>/blog/2016-04-16-election_2/</link>
-      <pubDate>Sat, 16 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/2016-04-16-election_2/</guid>
-      <description>So I&amp;rsquo;ve been relying on the excellent Green Papers site for the majority of the data that I want. Here is what&amp;rsquo;s on their website, and it&amp;rsquo;s generally the most reliable source (you&amp;rsquo;ll notice that a lot of major media sites like FiveThirtyEight will reference their work).
-If I wanted to scrape this exact data frame as it is, I can use &amp;ldquo;rvest&amp;rdquo;&amp;rdquo; to do so.
-{% highlight r %} library(rvest) al&amp;lt;- &amp;ldquo;http://www.</description>
-    </item>
-    
-    <item>
-      <title>Goodbye Kobe :(</title>
-      <link>/blog/kobe/</link>
-      <pubDate>Wed, 13 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/kobe/</guid>
-      <description>Kobe Bryant&amp;rsquo;s greatest moments will forever live on in Youtube reels and I&amp;rsquo;m thankful that I can always revisit them. Years from now when the memories fade, we&amp;rsquo;ll use them as ammunition in arguments with our younger coworkers and family members who doubted that anyone can play like that.
-Here&amp;rsquo;s what I remember, the good and the bad.
-The Utah airballs as a young gun. his first match-up against MJ. The 4th quarter comeback against Portland in the 2000 WCF, ending with crossover on Pippen leading to the famous &amp;ldquo;Bryant&amp;hellip; to Shaq!</description>
-    </item>
-    
-    <item>
-      <title>Election Analysis in R</title>
-      <link>/blog/2016-04-07-election/</link>
-      <pubDate>Thu, 07 Apr 2016 13:09:13 -0600</pubDate>
-      
-      <guid>/blog/2016-04-07-election/</guid>
-      <description>I&amp;rsquo;m going to write my first tutorial in R. While I would never call myself an expert in R (especially when I follow the footsteps of so many great R programmers), I hope some beginners to data analysis may find use in my thoughts. A more experienced programmer would (and should!) pick out inefficiencies and errors in my code.
-I&amp;rsquo;m thoroughly obssessed with the US election this year, if you&amp;rsquo;ve noticed my Tweets over the last few months.</description>
-    </item>
-    
-    <item>
-      <title>American Census Survey in R with CartoDB</title>
-      <link>/blog/carto-db/</link>
-      <pubDate>Wed, 06 Jan 2016 13:09:13 -0600</pubDate>
-      
-      <guid>/blog/carto-db/</guid>
-      <description>honors to Kyle Walker per usual, for his handy hack of the ACS package.
-Orange County&amp;rsquo;s GINI index as of the American Census Survey&amp;rsquo;s recent 2010-2014 estimates.
-{% highlight r %} library(dplyr) library(acs14lite) library(CartoDB) library(rgdal) library(acs) {% endhighlight %}
-Set up permissions (get API keys from ACS, CartoDB)
-{% highlight r %} set_api_key(&amp;lsquo;zzzzzz&amp;rsquo;) cartodb(&amp;lsquo;username&amp;rsquo;,&amp;lsquo;apikey&amp;rsquo;) {% endhighlight %}
-Code
-{% highlight r %} acs.lookup(endyear=2014, keyword=&amp;ldquo;Gini&amp;rdquo;) #use ACS package to look up correct table numbers oc&amp;lt;- acs14(geography = &amp;lsquo;tract&amp;rsquo;, variable = c(&amp;lsquo;B19083_001E&amp;rsquo;, &amp;lsquo;B19083_001M&amp;rsquo;), state = &amp;lsquo;CA&amp;rsquo;, county=&amp;lsquo;Orange&amp;rsquo;) oc_tracts &amp;lt;- tracts(&amp;lsquo;CA&amp;rsquo;, &amp;lsquo;Orange County&amp;rsquo;, cb = TRUE) oc2&amp;lt;- oc %&amp;gt;% mutate(geoid = paste0(state, county, tract), gini = round(100 *(B19083_001E),1), moe= round(100 *(B19083_001M),1)) %&amp;gt;% select (geoid, gini, moe) oc_tracts2 &amp;lt;- geo_join(oc_tracts, oc2, &amp;ldquo;GEOID&amp;rdquo;, &amp;ldquo;geoid&amp;rdquo;) r2cartodb(oc_tracts2, &amp;lsquo;oc&amp;rsquo;) {% endhighlight %}</description>
     </item>
     
   </channel>
